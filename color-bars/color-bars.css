@@ -1,0 +1,26 @@
+#c1 {
+  background-color: limegreen;
+}
+
+#c2 {
+  background-color: coral;
+}
+#c3 {
+  background-color: gold;
+}
+#c4 {
+  background-color: plum;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+}
+
+div.column {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

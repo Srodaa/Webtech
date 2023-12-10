@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT play (author, title, act)> <!-- #PCDATA azt jelenti, hogy szöveges tartalom-->
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT act (title, scene)>
+<!ELEMENT scene (title, (speech | stagedir)*)><!-- Sppech és stagedir tetszőleges sorrendben követhetik egymást. Ha + a * helyett akkor legalább
+egyszer szerepelniük kell. Ha * akkor pedig bármilyen sorrendben követehetik egymást.-->
+<!ELEMENT speech (speaker, (line | stagedir)*)>
+<!ELEMENT speaker (#PCDATA)>
+<!ELEMENT line (#PCDATA | stagedir)*>
+<!ELEMENT stagedir (#PCDATA)>

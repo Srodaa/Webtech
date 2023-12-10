@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "base": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rates": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["amount", "base", "date", "rates"]
+}

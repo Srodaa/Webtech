@@ -1,0 +1,49 @@
+.hogwarts-form {
+  width: 25%;
+  background-color: mintcream;
+}
+
+.hogwarts-form > div {
+  margin: 1em;
+}
+
+.hogwarts-form label:has(+ :is(input, select, textarea)[required])::after {
+  content: "*";
+  color: red;
+  vertical-align: super;
+  font-size: small;
+}
+
+.hogwarts-form input[type="checkbox"]:not(:checked) + fieldset.conditional {
+  display: none;
+}
+
+.hogwarts-form label {
+  display: block;
+}
+input,
+select,
+textarea {
+  border: medium solid darkslateblue;
+  border-radius: 0.2em;
+  width: 100%;
+}
+
+.hogwarts-form div:has(button) {
+  text-align: center;
+}
+button[type="submit"] {
+  color: white;
+  background-color: darkslateblue;
+  margin-bottom: 1em;
+}
+
+.hogwarts-form input[type="email"]:invalid {
+  background-color: tomato;
+  color: white;
+}
+
+.hogwarts-form :focus {
+  border-color: gold;
+  border-width: thick;
+}

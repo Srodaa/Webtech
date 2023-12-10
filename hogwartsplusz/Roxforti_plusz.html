@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://arato.inf.unideb.hu/jeszenszky.peter/webtech/lab/html/hogwarts-form/hogwarts-form_hu.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Roxforti regisztrációs űrlap</title>
+    <link rel="stylesheet" href="hogwarts-form.css" />
+  </head>
+  <body>
+    <h1>Roxforti regisztrációs űrlap</h1>
+    <form
+      class="fancy-form"
+      method="post"
+      enctype="multipart/form-data"
+      action="https://webhook.site/8cf806b6-1d9b-449c-bc8b-75c8f5c7729f"
+    >
+      <div>
+        <label for="name">Név</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required=""
+          placeholder="pl. Harry James Potter "
+        />
+      </div>
+      <div>
+        <label for="dob">Születési dátum</label>
+        <input type="date" name="dob" id="dob" required="" />
+      </div>
+      <div>
+        <fieldset>
+          <legend>Válasszon egy házat.</legend>
+          <input type="radio" name="houses" required />Griffendél
+          <input type="radio" name="houses" />Hugrabug
+          <input type="radio" name="houses" />Hollóhát
+          <input type="radio" name="houses" />Mardekár
+        </fieldset>
+      </div>
+      <div>
+        <label for="has-pet">Kijelentem, hogy van kisállatom.</label>
+        <input type="checkbox" name="has-pet" id="has-pet" value="yes" />
+        <fieldset class="conditional">
+          <legend>Kisállat</legend>
+          <label
+            >Faj<input type="text" name="pet-species" placeholder="pl. bagoly"
+          /></label>
+          <label
+            >Név<input type="text" name="pet-name" placeholder="pl. Hedvig"
+          /></label>
+        </fieldset>
+      </div>
+      <div>
+        <label for="varazspalca">Varázspálcák száma</label>
+        <input type="number" name="varazspalca" id="varazspalca" min="0" />
+      </div>
+      <div>
+        <label for="kepfeltolto">Képfeltöltés</label>
+        <input
+          type="file"
+          name="kepfeltolto"
+          id="kepfeltolto"
+          accept="image/png, image/jpeg"
+        />
+      </div>
+      <div>
+        <fieldset>
+          <legend>Meg akarod-e látogatni a Mágiaügyi Minisztériumot?</legend>
+          <input
+            type="radio"
+            name="latogatas"
+            id="latogatas"
+            value="yes"
+            required
+          />Igen
+          <input type="radio" name="latogatas" id="latogatas" value="no" />Nem
+        </fieldset>
+      </div>
+      <div>
+        <label for="email">Email cím</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern=".+@hogwarts\.ac\.uk"
+          placeholder="pl. hjp@hogwarts.ac.uk"
+          title="Egy @hogwarts.ac.uk végződésű email cím megadása kötelező."
+        />
+      </div>
+      <div>
+        <label for="comments">Megjegyzések</label>
+        <textarea
+          name="comments"
+          id="comments"
+          rows="5"
+          maxlength="200"
+          placeholder="pl. Benne szeretnék lenni a kviddics csapatban."
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit">Küldés</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+$table-bg-color: rgb(214, 139, 64);
+
+.sudoku {
+  border-collapse: collapse;
+
+  td {
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  td, th{
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  td:nth-child(9n + 1){
+    background-color: $table-bg-color;
+  }
+
+  
+  td:nth-child(3n){
+    border-right: medium solid black;
+  }
+  tr:nth-child(3n){
+    border-bottom: medium solid black;
+  }
+
+  tr:first-child > td{
+      border-top: medium solid black;
+  }
+  tr:last-child > td{
+    border-bottom: medium solid black;
+  }
+  tr > td:last-of-type{
+    border-right: medium solid black;
+  } 
+  tr > td:first-child{
+    border-left: medium solid black;
+  }
+
+}
+

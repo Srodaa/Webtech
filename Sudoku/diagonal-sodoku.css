@@ -1,0 +1,36 @@
+.sudoku {
+  border-collapse: collapse;
+}
+.sudoku td {
+  border: 1px solid black;
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+.sudoku td, .sudoku th {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+.sudoku td:nth-child(9n+1) {
+  background-color: rgb(214, 139, 64);
+}
+.sudoku td:nth-child(3n) {
+  border-right: medium solid black;
+}
+.sudoku tr:nth-child(3n) {
+  border-bottom: medium solid black;
+}
+.sudoku tr:first-child > td {
+  border-top: medium solid black;
+}
+.sudoku tr:last-child > td {
+  border-bottom: medium solid black;
+}
+.sudoku tr > td:last-of-type {
+  border-right: medium solid black;
+}
+.sudoku tr > td:first-child {
+  border-left: medium solid black;
+}/*# sourceMappingURL=diagonal-sodoku.css.map */

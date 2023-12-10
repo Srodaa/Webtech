@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hogwarts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Hogwarts.css'>
+    <script defer src="hogwarts.js"></script>
+</head>
+<body>
+     <h1>Hogwarts Registration Form</h1>
+     <form method="post" class="hogwarts-form" action="https://webhook.site/38ed1aac-da94-405a-8489-2fa60f09b68c">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="e.g., Harry James Potter"/>
+        </div>
+        <div>
+            <label for="dateOfBirth">Date of birth</label>
+            <input type="date" name="date" id="dateOfBirth" required />
+        </div>
+        <div>
+            <label for="house">House</label>
+            <select id="house" name="house" required>
+                <option value="">--Please choose an option--</option>
+                <option value="gryffindor">Gryffindor</option>
+                <option value="slytherin">Slytherin</option>
+                <option value="hufflepuff">Hufflepuff</option>
+                <option value="ravenclaw">Ravenclaw</option>
+            </select>
+        </div>
+        <div>
+            <label for="hasPet">I hereby state that I have a companion pet.</label>
+            <input type="checkbox" name="hasPet" id="hasPet">
+            <fieldset class="conditional">
+                <legend>Companion pet</legend>
+                <label for="species">Species</label>
+                <input type="text" name="species" id="species" placeholder="e.g., owl" />
+                <label for="petName">Name</label>
+                <input type="text" name="petName" id="petName" placeholder="e.g., Hedwig" />
+            </fieldset>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="e.g., hjp@hogwarts.ac.uk" pattern="^[a-zA-Z0-9]{3,10}@hogwarts.ac.uk$"/>
+        </div>
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"
+            rows="5" 
+            maxlength="200" 
+            placeholder="e.g., I would like to be included in the quidditch team." > </textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

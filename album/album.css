@@ -1,0 +1,62 @@
+album {
+  display: block;
+  width: fit-content;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-shadow: 0.5em 0.5em 0.5em grey;
+}
+
+artist,
+album > title,
+year {
+  /*Album alatti közvetlen title gyermekek*/
+  display: inline-block;
+  font-size: x-large;
+  margin-bottom: 0.5em;
+}
+
+tracks {
+  display: table;
+  width: 100%;
+  counter-reset: track-number;
+}
+
+track {
+  display: table-row;
+}
+track > title,
+length {
+  display: table-cell;
+  padding: 0.4em;
+}
+
+year::before {
+  content: "(";
+}
+year::after {
+  content: ")";
+}
+/* track:nth-child(2n): 0, 2, 4, 6 -> páros szmú track-eket választja ki*/
+track:nth-child(2n + 1) {
+  background-color: whitesmoke;
+}
+track:nth-child(2n) {
+  background-color: white;
+}
+track:hover {
+  font-weight: bold;
+  background-color: #ffc400;
+}
+/*Lista számok + a szülőben egy counter-reset: track-number;*/
+track > title::before {
+  content: counter(track-number) ".";
+  counter-increment: track-number;
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  margin-right: 0.5em;
+}
+length {
+  text-align: right;
+}
